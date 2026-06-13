@@ -1,0 +1,4 @@
+﻿system,n,n_fail_scenarios,format_compliance_%,arithmetic_exact_%,arithmetic_within5pct_%,cost_median_pct_err,margin_violation_rate_%,recommendation_coverage_%,arithmetic_within10pct_%,cost_MAE_won,parseable_cost_count,green_lit_count,violation_count
+b0,80,40,97.5,0.0,7.5,32.5,95.0,97.5,18.8,571.1,78,78,38
+b1,80,40,100.0,5.0,22.5,12.2,100.0,100.0,43.8,153.0,80,80,40
+proposed,80,40,97.5,0.0,35.0,14.9,0.0,97.5,45.0,172.6,78,40,0

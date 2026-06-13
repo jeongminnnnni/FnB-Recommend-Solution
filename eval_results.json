@@ -1,0 +1,70 @@
+{
+  "config": {
+    "base_model": "unsloth/Qwen3-4B-Instruct-2507-unsloth-bnb-4bit",
+    "adapter": "qwen3_4b_fnb_lora/final_adapter",
+    "target_margin": 70.0,
+    "decoding": {
+      "do_sample": false,
+      "max_new_tokens": 512,
+      "seed": 42
+    },
+    "mapping_method": "C-input-anchored (recipe·price fixed by input; GT=margin_engine)",
+    "fewshot_k": 3,
+    "note": "re-aggregated from eval_raw.jsonl with decomposed metric-2"
+  },
+  "testset": {
+    "size": 80,
+    "pass": 40,
+    "fail": 40
+  },
+  "results": [
+    {
+      "system": "b0",
+      "n": 80,
+      "n_fail_scenarios": 40,
+      "format_compliance_%": 97.5,
+      "arithmetic_exact_%": 0.0,
+      "arithmetic_within5pct_%": 7.5,
+      "cost_median_pct_err": 32.5,
+      "margin_violation_rate_%": 95.0,
+      "recommendation_coverage_%": 97.5,
+      "arithmetic_within10pct_%": 18.8,
+      "cost_MAE_won": 571.1,
+      "parseable_cost_count": 78,
+      "green_lit_count": 78,
+      "violation_count": 38
+    },
+    {
+      "system": "b1",
+      "n": 80,
+      "n_fail_scenarios": 40,
+      "format_compliance_%": 100.0,
+      "arithmetic_exact_%": 5.0,
+      "arithmetic_within5pct_%": 22.5,
+      "cost_median_pct_err": 12.2,
+      "margin_violation_rate_%": 100.0,
+      "recommendation_coverage_%": 100.0,
+      "arithmetic_within10pct_%": 43.8,
+      "cost_MAE_won": 153.0,
+      "parseable_cost_count": 80,
+      "green_lit_count": 80,
+      "violation_count": 40
+    },
+    {
+      "system": "proposed",
+      "n": 80,
+      "n_fail_scenarios": 40,
+      "format_compliance_%": 97.5,
+      "arithmetic_exact_%": 0.0,
+      "arithmetic_within5pct_%": 35.0,
+      "cost_median_pct_err": 14.9,
+      "margin_violation_rate_%": 0.0,
+      "recommendation_coverage_%": 97.5,
+      "arithmetic_within10pct_%": 45.0,
+      "cost_MAE_won": 172.6,
+      "parseable_cost_count": 78,
+      "green_lit_count": 40,
+      "violation_count": 0
+    }
+  ]
+}

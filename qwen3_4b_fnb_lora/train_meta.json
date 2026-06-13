@@ -1,0 +1,12 @@
+{
+  "model": "unsloth/Qwen3-4B-Instruct-2507-unsloth-bnb-4bit",
+  "lora_r": 8,
+  "lora_alpha": 16,
+  "epochs": 3,
+  "lr": 0.0002,
+  "effective_batch": 8,
+  "max_seq_length": 512,
+  "train_size": 90,
+  "eval_size": 10,
+  "train_runtime_sec": 209.6288
+}
